@@ -30,3 +30,5 @@
 10. Do not expose the docker Daemon set **socket:**
     1. Do not expose */var/run/docker.sock* to other containers
     2. make sure the daemonset endpoint is not exposed to public networks
+
+11. remove systm packages lists and cache to save space, it makes also the image safer. example for debian `RUN rm -rf /var/lib/apt/lists/* /var/cache/apt/*`
